@@ -1,12 +1,13 @@
 // All shared types for the AI chat aggregator
 
-export type ModelId = "groq" | "mistral" | "openai" | "huggingface";
+export type ModelId = "groq" | "mistral" | "openai" | "huggingface" | "azure" | "gemini";
 
 export interface ModelConfig {
   id: ModelId;
   label: string;
   color: string; // tailwind bg class for the panel accent
   description: string;
+  disabled?: boolean;
 }
 
 // What the backend sends back per model

@@ -17,16 +17,24 @@ export const MODELS: ModelConfig[] = [
     description: "Efficient and powerful European LLM",
   },
   {
-    id: "openai",
-    label: "OpenAI GPT-3.5",
-    color: "from-emerald-500 to-teal-600",
-    description: "Trusted general-purpose language model",
-  },
-  {
     id: "huggingface",
     label: "HuggingFace",
     color: "from-orange-500 to-amber-600",
-    description: "Open-source Mistral 7B via HuggingFace",
+    description: "Coming soon: No API key configured",
+    disabled: true,
+  },
+  {
+    id: "gemini",
+    label: "Google Gemini",
+    color: "from-emerald-500 to-teal-600",
+    description: "Coming soon: No API key configured",
+    disabled: true,
+  },
+  {
+    id: "azure",
+    label: "Azure OpenAI",
+    color: "from-blue-700 to-indigo-800",
+    description: "Enterprise-grade OpenAI via Microsoft Azure",
   },
 ];
 

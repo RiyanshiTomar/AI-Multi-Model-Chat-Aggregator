@@ -2,6 +2,8 @@
 
 import { PanelState } from "@/types";
 import { MODELS } from "@/lib/config";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface Props {
   panel: PanelState;
@@ -84,11 +86,12 @@ function LoadingContent({ label }: { label: string }) {
   );
 }
 
+
 function SuccessContent({ text }: { text: string }) {
   return (
-    <div className="text-sm text-gray-200 leading-relaxed whitespace-pre-wrap">
-      {text}
-    </div>
+    <article className="prose prose-sm prose-invert max-w-none prose-p:leading-relaxed prose-pre:bg-white/5 prose-pre:border prose-pre:border-white/10">
+      <ReactMarkdown remarkPlugins={[remarkGfm]}>{text}</ReactMarkdown>
+    </article>
   );
 }
 

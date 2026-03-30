@@ -8,7 +8,10 @@ const config = {
         GROQ: process.env.GROQ_API_KEY,
         MISTRAL: process.env.MISTRAL_API_KEY,
         OPENAI: process.env.OPENAI_API_KEY,
-        HUGGINGFACE: process.env.HUGGINGFACE_API_KEY
+        HUGGINGFACE: process.env.HUGGINGFACE_API_KEY,
+        AZURE_OPENAI_KEY: process.env.AZURE_OPENAI_API_KEY,
+        AZURE_OPENAI_ENDPOINT: process.env.AZURE_OPENAI_ENDPOINT,
+        AZURE_OPENAI_DEPLOYMENT: process.env.AZURE_OPENAI_DEPLOYMENT
     }
 };
 
@@ -17,7 +20,7 @@ const configuredKeysCount = Object.values(config.API_KEYS).filter(Boolean).lengt
 if (configuredKeysCount === 0) {
     console.warn('⚠️ WARNING: No AI API keys are found in the .env configuration. The application will not function properly.');
 } else {
-    console.info(`✅ Configuration Loaded Secruely: Found ${configuredKeysCount} initialized API provider keys.`);
+    console.info(`✅ Configuration Loaded Securely: Found ${configuredKeysCount} initialized API provider keys.`);
 }
 
 module.exports = config;

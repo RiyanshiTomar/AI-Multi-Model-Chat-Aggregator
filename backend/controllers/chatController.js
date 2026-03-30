@@ -20,8 +20,7 @@ exports.handleChatRequest = async (req, res) => {
         const modelHandlers = {
             'groq': aiService.queryGroq,
             'mistral': aiService.queryMistral,
-            'openai': aiService.queryOpenAI,
-            'huggingface': aiService.queryHuggingFace
+            'azure': aiService.queryAzureOpenAI
         };
 
         // Validate selected models and prepare promises
